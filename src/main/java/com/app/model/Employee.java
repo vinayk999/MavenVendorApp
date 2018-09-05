@@ -8,7 +8,7 @@ import javax.persistence.Table;
 @Entity
 
 
-@Table(name="Vendor_emptab")
+@Table(name="maven_emptab")
 public class Employee {
 
 	@Id

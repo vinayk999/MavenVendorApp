@@ -10,14 +10,22 @@ import javax.persistence.Table;
 public class Customer {
 
 	@Id
-	@Column(name="name")
+	@Column(name="cid")
+	private int custId;
+	@Column(name="cname")
 	private String custName;
-	@Column(name="number")
+	@Column(name="cnumber")
 	private String custCntNumber;
-	@Column(name="email")
+	@Column(name="cemail")
 	private String custEmail;
-	@Column(name="addr")
+	@Column(name="caddr")
 	private String custAddr;
+	public int getCustId() {
+		return custId;
+	}
+	public void setCustId(int custId) {
+		this.custId = custId;
+	}
 	public String getCustName() {
 		return custName;
 	}
@@ -44,9 +52,9 @@ public class Customer {
 	}
 	@Override
 	public String toString() {
-		return "Customer [custName=" + custName + ", custCntNumber="
-				+ custCntNumber + ", custEmail=" + custEmail + ", custAddr="
-				+ custAddr + "]";
+		return "Customer [custId=" + custId + ", custName=" + custName
+				+ ", custCntNumber=" + custCntNumber + ", custEmail="
+				+ custEmail + ", custAddr=" + custAddr + "]";
 	}
 	public Customer() {
 		super();

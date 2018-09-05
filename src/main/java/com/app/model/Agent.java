@@ -10,15 +10,23 @@ import javax.persistence.Table;
 public class Agent {
 
 	@Id
-	@Column(name="fname")
+	@Column(name="aid")
+	private int agentId;
+	@Column(name="afname")
 	private String agentFirstName;
-	@Column(name="lname")
+	public int getAgentId() {
+		return agentId;
+	}
+	public void setAgentId(int agentId) {
+		this.agentId = agentId;
+	}
+	@Column(name="alname")
 	private String agentLastName;
-	@Column(name="mobile")
+	@Column(name="amobile")
 	private String agentMobileNumber;
-	@Column(name="email")
+	@Column(name="aemail")
 	private String agentEmail;
-	@Column(name="addr")
+	@Column(name="aaddr")
 	private String agentAddr;
 	public String getAgentFirstName() {
 		return agentFirstName;
@@ -52,10 +60,10 @@ public class Agent {
 	}
 	@Override
 	public String toString() {
-		return "Agent [agentFirstName=" + agentFirstName + ", agentLastName="
-				+ agentLastName + ", agentMobileNumber=" + agentMobileNumber
-				+ ", agentEmail=" + agentEmail + ", agentAddr=" + agentAddr
-				+ "]";
+		return "Agent [agentId=" + agentId + ", agentFirstName="
+				+ agentFirstName + ", agentLastName=" + agentLastName
+				+ ", agentMobileNumber=" + agentMobileNumber + ", agentEmail="
+				+ agentEmail + ", agentAddr=" + agentAddr + "]";
 	}
 	public Agent() {
 		super();

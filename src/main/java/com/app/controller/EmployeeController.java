@@ -41,4 +41,8 @@ public class EmployeeController {
 	public String showPage(){
 		return "Home";
 	}*/
+	@RequestMapping("/reg")
+	public String showPage(){
+		return "Register";
+	}
 }
